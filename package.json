@@ -4,7 +4,9 @@
   "description": "CS 362 Final Project",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "test:e2e": "cypress run --spec 'tests/__e2e__/**/*'",
+    "test:e2e_visual": "cypress open --spec 'tests/__e2e__/'"
   },
   "devDependencies": {
     "css-loader": "^6.7.4",
