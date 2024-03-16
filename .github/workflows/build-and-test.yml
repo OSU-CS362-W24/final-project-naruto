@@ -19,11 +19,16 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: '18'
+    # install dependencies
     - run: npm ci
+    # start the server and run tests
+    - run: npm start
+    # end to end
     - run: npm run test:e2e
+    # unit tests
     - run: npm run test:unit
+    # integration tests
     - run: npm run test:int
-    ### Add other test types here
 
 
   build-and-deploy:
