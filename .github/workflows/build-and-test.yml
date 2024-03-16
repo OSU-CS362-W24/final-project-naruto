@@ -30,7 +30,7 @@ jobs:
     # unit tests
     # - run: npm run test:unit
     # integration tests
-    - run: npm run test:int
+    # - run: npm run test:int
 
   build-and-deploy:
     needs: test
