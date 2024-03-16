@@ -22,14 +22,27 @@ jobs:
     # install dependencies
     - run: npm ci
     # start the server and run tests
-    - run: npm start
+    - name: Start server
+      run: npm start&
+      continue-on-error: true
+    - name: Wait for server to start
+      run: |
+        timeout=300 # Timeout in seconds
+        end=$((SECONDS+$timeout))
+        until npm run check-server; do
+          if [[ $SECONDS -ge $end ]]; then
+            echo "Failed to start server within $timeout seconds."
+            exit 1
+          fi
+          echo "Waiting for server to start..."
+          sleep 5
+        done
     # end to end
     - run: npm run test:e2e
     # unit tests
     - run: npm run test:unit
     # integration tests
     - run: npm run test:int
-
 
   build-and-deploy:
     needs: test
