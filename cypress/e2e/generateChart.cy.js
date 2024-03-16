@@ -31,7 +31,8 @@ describe("chart image generation check”.", () => {
       cy.findByText("+").click();
       cy.findAllByLabelText('X').last().type('7');
       cy.findAllByLabelText('Y').last().type('20');
-      
+      cy.findByText("+").click();
+
       cy.findByText("Generate chart").click();
 
       //assert that the chart image is generated
