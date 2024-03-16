@@ -6,10 +6,11 @@
     "build": "webpack",
     "start": "webpack serve --open",
     "test:e2e": "cypress run --spec 'tests/__e2e__/**/*'",
-    "test:e2e_visual": "cypress open --spec 'tests/__e2e__/'"
+    "test:e2e_visual": "cypress open"
   },
   "devDependencies": {
     "css-loader": "^6.7.4",
+    "cypress": "^13.7.0",
     "html-webpack-plugin": "^5.5.1",
     "style-loader": "^3.3.3",
     "webpack": "^5.83.1",
