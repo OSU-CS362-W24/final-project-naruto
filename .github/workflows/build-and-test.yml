@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+permissions:
+  pages: write
+  id-token: write
+
 jobs:
 
   test:
@@ -45,8 +49,6 @@ jobs:
     - run: npm ci
     - run: npm run build
     - name: Deploy to GitHub Pages
-      permissions:
-        contents: write
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
