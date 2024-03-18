@@ -59,7 +59,6 @@ test("Tests that a chart in localStorage is returned by loadAllSavedCharts", fun
     //act
     var charts = chartStorage.loadAllSavedCharts()
     //assert
-    console.log(charts)
     expect(charts[0]).toEqual(chart)
 })
 
