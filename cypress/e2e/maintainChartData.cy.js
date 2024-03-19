@@ -22,7 +22,7 @@ function performTests() {
     cy.findAllByLabelText('Y').eq(4).should('have.value', '20');
 }
 
-describe('template spec', () => {
+describe('Chart data is maintained across pages', () => {
   it('passes', () => {
     //fill in the line chart form as detailed in the generateChart test
     cy.visit('/');

@@ -28,7 +28,6 @@ test("correctly renders GitHub search results", async function () {
         "Goofy Goober",
         "#cb5125"
     )
-    console.log(x)
     //assert
     expect(x).toBeDefined()
 })

@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Re-opening a saved chart', () => {
   it('passes', () => {
     //build and save a chart, then move to the gallery as
     //detailed in the saveChartToGallery test
