@@ -33,9 +33,9 @@ jobs:
     # end to end
     - run: npm run test:e2e
     # unit tests
-    # - run: npm run test:unit
+    - run: npm run test:unit
     # integration tests
-    # - run: npm run test:int
+    - run: npm run test:integration
 
   build-and-deploy:
     needs: test
