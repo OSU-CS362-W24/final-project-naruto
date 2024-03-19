@@ -1,4 +1,4 @@
-describe("chart image generation check”.", () => {
+describe("Chart is correctly generated", () => {
   it("should generate a chart image", () => {
       //navigate to the home page
       cy.visit('/');

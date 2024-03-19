@@ -1,4 +1,4 @@
-describe('template spec', () => {
+describe('Saving a chart to the “gallery”', () => {
   it('passes', () => {
     //fill in the line chart form as detailed in the generateChart test
     cy.visit('/');
