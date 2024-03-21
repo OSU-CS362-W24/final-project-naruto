@@ -1,7 +1,6 @@
 /**
-* @jest-environment jsdom
+* @jest-environment ./src/fixjsdomenvironment.js
 */
-
 require("whatwg-fetch")
 require("@testing-library/jest-dom")
 const domTesting = require("@testing-library/dom") 
@@ -15,11 +14,8 @@ const generateChartImg = require('./../lib/generateChartImg.js')
 * returns anything.      
 *----------------------------------------------------------------------------------
 */
-test("correctly renders GitHub search results", async function () {
-    //arrange
-    global.URL.createObjectURL = jest.fn (
-        (blob) => `blob:${blob.size}#t=${Date.now()}`
-    )
+test("generateChartImg correctly returns a url given chart data", async function () {
+    //arrange    
     //act
     var x = await generateChartImg(
         "line",
@@ -29,5 +25,5 @@ test("correctly renders GitHub search results", async function () {
         "#cb5125"
     )
     //assert
-    expect(x).toBeDefined()
+    expect(x).toBeDefined();
 })
